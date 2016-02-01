@@ -13,11 +13,36 @@
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+
+@mixin fontSize($number){
+	font-size:$number * 1px;
+	font-size:($number / 10) * 1rem; 
+}
+
 /*
 ====================================
 Default Styling
 ====================================
 */
+
+html{
+	font-size:62.5%;
+}
+
+body{
+	@include fontSize(16);
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li{
+	padding:0;
+	margin:0;
+}
+
+.flex{
+	flex-wrap:wrap;
+	display:flex;
+}
+
 
 img {
 	max-width: 100%;
@@ -28,20 +53,31 @@ body {
 }
 
 .container {
-	max-width: 1200px;
+	border:1px solid black;
+	max-width: 95%;
 	margin: 0 auto;
 }
 
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
-}
+// .content {
+// 	float: left;
+// 	width: 65%;
+// 	margin-right: 5%;
+// }
 
 .full {
 	width: 100%;
 }
 
+.primaryNav{
+	ul{
+		list-style:none;
+	}
+}
+
+footer{
+	text-align:center;
+	@include fontSize(10);
+}
 
 
 
