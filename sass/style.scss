@@ -14,16 +14,29 @@
 @import 'comments';
 @import 'footer';
 
+
+$darkGrey:#666;
+$lightGrey:#999;
+
+
 @mixin fontSize($number){
 	font-size:$number * 1px;
 	font-size:($number / 10) * 1rem; 
 }
 
-/*
-====================================
-Default Styling
-====================================
-*/
+@mixin contentFont{
+	font-family:'Montserrat';
+	color:$darkGrey;
+}
+
+@mixin headerFont{
+	font-family:'Roboto Slab';
+	color:black;
+}
+
+
+
+// UNIVERSAL SETTINGS
 
 html{
 	font-size:62.5%;
@@ -31,6 +44,7 @@ html{
 
 body{
 	@include fontSize(16);
+	@include contentFont;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, li{
@@ -43,18 +57,12 @@ h1, h2, h3, h4, h5, h6, p, ul, li{
 	display:flex;
 }
 
-
 img {
 	max-width: 100%;
 }
 
-body {
-	color: #333;
-}
-
 .container {
-	border:1px solid black;
-	max-width: 95%;
+	max-width: 70%;
 	margin: 0 auto;
 }
 
@@ -69,8 +77,45 @@ body {
 }
 
 .primaryNav{
+	justify-content:space-between;
+	@include fontSize(14);
+	img{
+		height:100%;
+		margin-top:3.5px;
+	}
 	ul{
 		list-style:none;
+		width: 55%;
+		justify-content:space-between;
+	}
+}
+
+.secondaryNav{
+	justify-content:space-between;
+	@include fontSize(12);
+	.options{
+		width: 12%;
+		justify-content:space-between;
+		.fa-usd, .fa-search{
+			margin-top:3px;
+		}
+	}
+	ul{
+		list-style:none;
+		width: 22%;
+		justify-content:space-between;
+	}
+}
+
+.primaryNav, .secondaryNav{
+	a{
+		text-transform:uppercase;
+		text-decoration:none;
+		color:$lightGrey;
+		transition:0.75s;
+		&:hover{
+			color:black;
+		}
 	}
 }
 

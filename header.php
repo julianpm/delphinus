@@ -7,6 +7,12 @@
   <title><?php  wp_title('|', true, 'right'); ?></title>
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
+  <!-- Load our Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- Load fontawesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
   <?php // Load our CSS ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
@@ -18,12 +24,30 @@
 
 <header>
 
-    <nav class="primaryNav container">
-      
+    <nav class="secondaryNav flex">
+      <div class="options flex">
+        <a href="#"><p>EN</p></a>
+        <a href="#"><i class="fa fa-usd"></i></a>
+        <a href="#"><i class="fa fa-search"></i></a>
+      </div> <!-- END OF OPTIONS -->
+      <ul class="flex">
+        <?php wp_nav_menu( array('container' => false, 'theme_location' => 'secondary', 'items_wrap' => '%3$s' ) ); ?>
+      </ul>
+    </nav> <!-- END OF SECONDARYNAV -->
+
+    <nav class="primaryNav container flex">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/delphinusLogo.png" alt="" width="" height="" />
       <ul class="flex">
         <?php wp_nav_menu( array('container' => false, 'theme_location' => 'primary', 'items_wrap' => '%3$s' ) ); ?>
       </ul>
     </nav> <!-- END OF PRIMARYNAV -->
 
 </header><!--/.header-->
+
+
+
+
+
+
+
 
