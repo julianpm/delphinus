@@ -66,48 +66,12 @@ img {
 	margin: 0 auto;
 }
 
-// .content {
-// 	float: left;
-// 	width: 65%;
-// 	margin-right: 5%;
-// }
-
 .full {
 	width: 100%;
 }
 
-.primaryNav{
-	justify-content:space-between;
-	@include fontSize(14);
-	img{
-		height:100%;
-		margin-top:3.5px;
-	}
-	ul{
-		list-style:none;
-		width: 55%;
-		justify-content:space-between;
-	}
-}
-
-.secondaryNav{
-	justify-content:space-between;
-	@include fontSize(12);
-	.options{
-		width: 12%;
-		justify-content:space-between;
-		.fa-usd, .fa-search{
-			margin-top:3px;
-		}
-	}
-	ul{
-		list-style:none;
-		width: 22%;
-		justify-content:space-between;
-	}
-}
-
 .primaryNav, .secondaryNav{
+	justify-content:space-between;
 	a{
 		text-transform:uppercase;
 		text-decoration:none;
@@ -117,7 +81,57 @@ img {
 			color:black;
 		}
 	}
+	ul{
+		list-style:none;
+	}
 }
+
+.options, .login, .homeNavBar{
+	justify-content:space-around;
+	a{
+		padding:6px;
+	}
+}
+
+.primaryNav{
+	@include fontSize(14);
+	padding:2.5% 0;
+	img{
+		height:100%;
+		margin-top:3.5px;
+	}
+}
+
+.secondaryNav{
+	@include fontSize(12);
+	border-bottom:1px solid #f6f6f6;
+	padding:1.5% 0;
+}
+
+.homeNavBar{
+	width: 55%;
+}
+
+.options{
+	width: 15%;
+	border:1px solid green;
+	li{
+		border-right:1px solid #f6f6f6;
+	}
+}
+
+.fa-usd, .fa-search{
+	margin-top:2.5px;
+}
+
+.login{
+	width: 25%;
+	border:1px solid green;
+	li{
+		border-left:1px solid #f6f6f6;
+	}
+}
+
 
 footer{
 	text-align:center;

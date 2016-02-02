@@ -25,19 +25,25 @@
 <header>
 
     <nav class="secondaryNav flex">
-      <div class="options flex">
-        <a href="#"><p>EN</p></a>
-        <a href="#"><i class="fa fa-usd"></i></a>
-        <a href="#"><i class="fa fa-search"></i></a>
-      </div> <!-- END OF OPTIONS -->
-      <ul class="flex">
+      <ul class="options flex">
+        <li>
+          <a href="#">EN</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-usd"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-search"></i></a>
+        </li>
+      </ul> <!-- END OF OPTIONS -->
+      <ul class="login flex">
         <?php wp_nav_menu( array('container' => false, 'theme_location' => 'secondary', 'items_wrap' => '%3$s' ) ); ?>
       </ul>
     </nav> <!-- END OF SECONDARYNAV -->
 
     <nav class="primaryNav container flex">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/delphinusLogo.png" alt="" width="" height="" />
-      <ul class="flex">
+      <ul class="homeNavBar flex">
         <?php wp_nav_menu( array('container' => false, 'theme_location' => 'primary', 'items_wrap' => '%3$s' ) ); ?>
       </ul>
     </nav> <!-- END OF PRIMARYNAV -->
