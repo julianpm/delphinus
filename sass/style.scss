@@ -36,6 +36,8 @@ $lightGrey:#999;
 
 
 
+
+
 // UNIVERSAL SETTINGS
 
 html{
@@ -45,6 +47,10 @@ html{
 body{
 	@include fontSize(16);
 	@include contentFont;
+}
+
+h1, h2, h3, h4{
+	@include headerFont;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, li{
@@ -88,8 +94,12 @@ img {
 
 .options, .login, .homeNavBar{
 	justify-content:space-around;
+}
+
+.options, .login{
 	a{
-		padding:6px;
+		display:block;
+		padding:10px;
 	}
 }
 
@@ -105,7 +115,7 @@ img {
 .secondaryNav{
 	@include fontSize(12);
 	border-bottom:1px solid #f6f6f6;
-	padding:1.5% 0;
+	// padding:1.5% 0;
 }
 
 .homeNavBar{
@@ -114,24 +124,15 @@ img {
 
 .options{
 	width: 15%;
-	border:1px solid green;
-	li{
-		border-right:1px solid #f6f6f6;
-	}
-}
-
-.fa-usd, .fa-search{
-	margin-top:2.5px;
+	border-right:1px solid #f6f6f6;
+	padding:0.75% 0;
 }
 
 .login{
 	width: 25%;
-	border:1px solid green;
-	li{
-		border-left:1px solid #f6f6f6;
-	}
+	border-left:1px solid #f6f6f6;
+	align-items:center;
 }
-
 
 footer{
 	text-align:center;
@@ -139,8 +140,30 @@ footer{
 }
 
 
+::selection {
+	background-color:pink;
+	color:white;
+}
 
 
+// MAIN PAGE
 
+.splash{
+	height:610px;
+	background-size:cover;
+	flex-direction:column;
+	text-align:center;
+	justify-content:center;
+}
 
+.splashHeadline {
+	@include fontSize(30);
+	letter-spacing:8px;
+	text-transform:uppercase;
+}
 
+.splashBlurb{
+	width: 30%;
+	margin:0 auto;
+	padding-top:1.5%;
+}
