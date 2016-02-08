@@ -23,7 +23,11 @@ function theme_setup() {
   * adding additional menus to the array. */
 	register_nav_menus( array(
 		'primary' => 'Primary Navigation',
-		'secondary' => 'Secondary Navigation'
+		'secondary' => 'Secondary Navigation',
+		'information' => 'Information Navigation',
+		'collections' => 'Collections Navigation',
+		'extras' => 'Extras Navigation',
+		'account' = 'My Account'
 	) );
 
 	/*
