@@ -1,5 +1,5 @@
 /*
-* Theme Name: HackerYou Starter Theme
+* Theme Name: Delphinus Theme
 * Theme URI: http://hackeryou.com;
 * Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
 * Version: 1.0
@@ -40,7 +40,7 @@ $shadowGrey:#ebebeb;
 
 
 
-// UNIVERSAL SETTINGS
+// UNIVERSAL STYLES
 
 html{
 	font-size:62.5%;
@@ -141,10 +141,33 @@ img {
 	align-items:center;
 }
 
-footer{
+.footerNav{
+	border:1px solid black;
+}
+
+.footerNavItems{
+	justify-content:space-between;
+	ul{
+		border:1px solid black;
+	}
+	li{
+		@include headerFont;
+	}
+}
+
+.sub-menu li{
+	@include contentFont;
+}
+
+.mainFooter, .elseFooter{
 	text-align:center;
 	@include fontSize(10);
 	padding:2% 0;
+	color:$darkGrey;
+}
+
+.elseFooter{
+	background: $bgGrey;
 }
 
 ::selection {
