@@ -56,7 +56,7 @@
 
 <?php else : ?>
 	<footer class="elseFooter">
-		<div class="footerSocial">
+		<div class="footerSocial flex">
 			<?php if (get_field("social_facebook", "option") ) : ?>
 					<a href="<?php the_field("social_facebook", "option"); ?>">
 						<i class="fa fa-facebook"></i>

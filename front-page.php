@@ -18,10 +18,6 @@
 		    <?php endif; ?>
 	    </section> <!-- END OF SPLASH -->
 
-	    <section class="fullNav container">
-	    	
-	    </section> <!-- END OF FULLNAV -->
-
       <?php endwhile; // end the loop?>
     </div> <!-- /,content -->
 
