@@ -43,7 +43,7 @@
 			</div> <!-- END OF SOCIAL -->
 
 			<?php if (get_field("newsletter_label", "option") ) : ?>
-				<h3 class="newsletterLabel"><?php the_field("newsletter_label", "option") ?></h3>
+				<h3 class="newsletterLabel"><?php the_field("newsletter_label", "option"); ?></h3>
 			<?php endif; ?>
 		</div> <!-- END OF INNERNEWSLETTER -->	
 	</section> <!-- END OF NEWSLETTER -->

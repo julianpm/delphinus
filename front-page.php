@@ -18,6 +18,24 @@
 		    <?php endif; ?>
 	    </section> <!-- END OF SPLASH -->
 
+		<section class="clients container">
+	    	<?php 
+			$images = get_field('client_gallery');
+
+			if( $images ): ?>
+			    <ul class="clientsList flex">
+			        <?php foreach( $images as $image ): ?>
+			            <li>
+			                <a href="<?php echo $image['url']; ?>">
+			                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+			                </a>
+			                <p><?php echo $image['caption']; ?></p>
+			            </li>
+			        <?php endforeach; ?>
+			    </ul> <!-- END OF CLIENTSLIST -->
+			<?php endif; ?>
+		</section> <!-- END OF CLIENTS -->
+
       <?php endwhile; // end the loop?>
     </div> <!-- /,content -->
 

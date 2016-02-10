@@ -50,9 +50,16 @@
 
 </header><!--/.header-->
 
-
-
-
+<?php if ( !is_front_page() ) : ?>
+    <section class="templateHeader">
+      <div class="templateTitle container flex">
+        <?php if ( get_field("page_title") ) : ?>
+          <p><?php the_field("page_title"); ?><?php the_title(); ?>
+        <?php endif; ?>
+        <h3><?php the_title(); ?></h3>
+      </div> <!-- END OF TEMPLATETITLE -->
+    </section> <!-- END OF TEMPLATEHEADER -->
+<?php endif; ?>
 
 
 

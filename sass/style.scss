@@ -53,6 +53,7 @@ body{
 
 h1, h2, h3, h4{
 	@include headerFont;
+	text-transform:uppercase;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, li{
@@ -90,7 +91,7 @@ img {
 
 	// COMBINED STYLES
 
-	.primaryNav, .secondaryNav, .promotionInner, .footerNavItems, .social, .footerSocial{
+	.primaryNav, .secondaryNav, .templateTitle, .promotionInner, .footerNavItems, .social, .footerSocial{
 		justify-content:space-between;
 	}
 
@@ -98,7 +99,7 @@ img {
 		justify-content:space-around;
 	}
 
-	.promotion, .newsletter, .elseFooter{
+	.promotion, .newsletter, .elseFooter, .templateHeader{
 		background: $bgGrey;
 	}
 
@@ -158,6 +159,12 @@ img {
 		align-items:center;
 	}
 
+	.templateTitle{
+		p{
+			color:$lightGrey;
+		}
+	}
+
 
 	// FOOTER
 
@@ -172,7 +179,6 @@ img {
 		text-align:center;
 		padding:3.5% 0;
 		letter-spacing:2px;
-		text-transform:uppercase;
 		box-shadow:1px 1px 5px 0 $shadowGrey;
 	}
 
@@ -225,7 +231,6 @@ img {
 	}
 
 	.newsletterLabel{
-		text-transform:uppercase;
 		width: 20%;
 		text-align:center;
 		@include fontSize(18);
@@ -251,6 +256,7 @@ img {
 	}
 
 
+
 // MAIN PAGE
 
 
@@ -267,13 +273,20 @@ img {
 	.splashHeadline {
 		@include fontSize(30);
 		letter-spacing:8px;
-		text-transform:uppercase;
 	}
 
 	.splashBlurb{
 		width: 30%;
 		margin:0 auto;
 		padding-top:1.5%;
+	}
+
+	.clients{
+		padding:3.5% 0;
+	}
+
+	.clientsList{
+		justify-content:space-between;
 	}
 
 
