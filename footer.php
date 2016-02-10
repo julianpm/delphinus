@@ -42,8 +42,11 @@
 				<?php endif; ?>
 			</div> <!-- END OF SOCIAL -->
 
-			<?php if (get_field("newsletter_label", "option") ) : ?>
+			<?php if ( get_field("newsletter_label", "option") ) : ?>
 				<h3 class="newsletterLabel"><?php the_field("newsletter_label", "option"); ?></h3>
+			<?php endif; ?>
+			<?php if ( get_field("mailchimp", "option") ) : ?>
+				<?php the_field("mailchimp", "option"); ?>
 			<?php endif; ?>
 		</div> <!-- END OF INNERNEWSLETTER -->	
 	</section> <!-- END OF NEWSLETTER -->
