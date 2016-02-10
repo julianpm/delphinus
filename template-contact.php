@@ -18,7 +18,7 @@ get_header();  ?>
 
 			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
-		<?php endif; ?>
+			<?php endif; ?>
 	</div> <!-- END OF OFFICE -->
 
 	<section class="mainContact container flex">

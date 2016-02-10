@@ -287,7 +287,7 @@ img {
 // MAIN PAGE
 
 
-	// SPLASH SECTION
+	// SPLASH
 
 	.splash{
 		background-size:cover;
@@ -316,6 +316,21 @@ img {
 		justify-content:space-between;
 	}
 
+
+	// PRODUCT
+
+	.productPreview{
+		padding:2% 0;
+		img{
+			width: 65%;
+			height:100%;
+		}
+	}
+
+	.productPreviewInfo{
+		width: 30%;
+		border:1px solid black;
+	}
 
 
 // CONTACT
