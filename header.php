@@ -53,7 +53,7 @@
 <?php if ( !is_front_page() ) : ?>
     <section class="templateHeader">
       <div class="templateTitle container flex">
-          <p>Home / <?php the_title(); ?></p>
+        <p>Home / <?php the_title(); ?></p>
         <h3><?php the_title(); ?></h3>
       </div> <!-- END OF TEMPLATETITLE -->
     </section> <!-- END OF TEMPLATEHEADER -->
