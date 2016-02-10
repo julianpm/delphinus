@@ -227,7 +227,6 @@ img {
 	}
 
 	.social{
-		border:2px solid green;
 		width: 20%;
 		align-items:center;
 		a{
@@ -332,13 +331,12 @@ img {
 	// ADDRESS
 
 	.address{
-		border:1px solid orange;
 		width: 30%;
 		padding:5% 2%;
 	}
 
 	.streetAddress{
-		border:1px solid green;
+		color:$lightGrey;
 		p:first-of-type{
 			padding-bottom:6%;
 		}

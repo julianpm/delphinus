@@ -25,7 +25,9 @@ get_header();  ?>
 		
 		<div class="address">
 		    <div class="streetAddress">
-		    	<?php the_content(); ?>
+		    	<?php if (get_field ("address") ) : ?>
+					<?php the_field("address"); ?>
+		    	<?php endif; ?>
 		    </div> <!-- END OF STREETADDRESS -->
 		    
 		    <div class="social contactSocial flex">
