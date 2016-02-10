@@ -91,7 +91,7 @@ img {
 
 	// COMBINED STYLES
 
-	.primaryNav, .secondaryNav, .templateTitle, .promotionInner, .footerNavItems, .innerNewsletter, .social, .footerSocial{
+	.primaryNav, .secondaryNav, .templateTitle, .mainContact, .promotionInner, .footerNavItems, .innerNewsletter, .social, .footerSocial{
 		justify-content:space-between;
 	}
 
@@ -333,13 +333,12 @@ img {
 
 	.address{
 		border:1px solid orange;
-		width: 35%;
-		padding:6% 3%;
+		width: 30%;
+		padding:5% 2%;
 	}
 
 	.streetAddress{
 		border:1px solid green;
-		letter-spacing:1px;
 		p:first-of-type{
 			padding-bottom:6%;
 		}
@@ -353,8 +352,12 @@ img {
 		margin-top:15%;
 	}
 
-	.contactUs h3{
-		letter-spacing:3px;
+	.contactUs{
+		border:1px solid green;
+		width: 67%;
+		h3{
+			letter-spacing:3px;
+		}
 	}
 
 
