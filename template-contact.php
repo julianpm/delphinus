@@ -58,6 +58,7 @@ get_header();  ?>
 			<?php if ( get_field( "greeting") ) : ?>
 				<h3><?php the_field("greeting"); ?></h3>
 			<?php endif; ?>
+			<?php the_content(); ?>
 		</div> <!-- END OF CONTACTUS -->
 
 	</section> <!-- END OF MAINCONTACT -->
