@@ -313,29 +313,36 @@ img {
 
 	// parent around all of them
 	.productPreview{
-		padding-bottom:3%;
+		padding-top:3%;
 	}
 
 	// individual product row
+
+	.product{
+		padding-bottom:3%;
+		img{
+			width: 67%;
+			height:100%;
+		}
+	}
 
 	.product:nth-of-type(even){
 		flex-direction:row-reverse;
 	}
 
-	.productPreview img{
-		width: 67%;
-		height: 100%;
-		padding-top:3%;
-	}
-
 	.productPreviewInfo{
-		margin-top:3%;
 		width: 30%;
 		flex-direction:column;
 		justify-content:center;
 		align-items:center;
 		img{
 			width: 15%;
+		}
+	}
+
+	.product:nth-of-type(5){
+		.productPreviewInfo img{
+			width: 20%;
 		}
 	}
 
