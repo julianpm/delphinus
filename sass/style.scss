@@ -231,11 +231,14 @@ img {
 		align-items:center;
 		a{
 			color:$lightGrey;
+			transition:0.75s;
+			&:hover{
+				color:black;
+			}
 		}
 	}
 
 	.newsletterLabel{
-		border:2px solid green;
 		width: 20%;
 		text-align:center;
 		@include fontSize(18);
@@ -243,7 +246,6 @@ img {
 	}
 
 	.mc4wp-form{
-		border:2px solid green;
 		width: 50%;
 	}
 
@@ -363,6 +365,7 @@ img {
 	}
 
 
+
 // CONTACT
 
 
@@ -371,7 +374,6 @@ img {
 	.office{
 		padding:4% 0;
 	}
-
 
 	// ADDRESS
 
@@ -400,6 +402,14 @@ img {
 		width: 67%;
 		h3{
 			letter-spacing:3px;
+		}
+	}
+
+	// FORM
+
+	#mc_embed_signup{
+		.mc-field-group{
+			border:3px solid blue;
 		}
 	}
 
