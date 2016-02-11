@@ -91,7 +91,7 @@ img {
 
 	// COMBINED STYLES
 
-	.primaryNav, .secondaryNav, .templateTitle, .mainContact, .promotionInner, .footerNavItems, .innerNewsletter, .social, .footerSocial{
+	.primaryNav, .secondaryNav, .templateTitle, .productPreview, .mainContact, .promotionInner, .footerNavItems, .innerNewsletter, .social, .footerSocial{
 		justify-content:space-between;
 	}
 
@@ -320,16 +320,31 @@ img {
 	// PRODUCT
 
 	.productPreview{
-		padding:2% 0;
 		img{
-			width: 65%;
+			width: 67%;
 			height:100%;
+			padding-top:3%;
 		}
 	}
 
 	.productPreviewInfo{
+		margin-top:3%;
 		width: 30%;
 		border:1px solid black;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		img{
+			width: 15%;
+		}
+	}
+
+	.productPreviewTitle{
+		color:white;
+		@include fontSize(18);
+		font-weight:normal;
+		letter-spacing:2px;
+		padding-top:15%;
 	}
 
 

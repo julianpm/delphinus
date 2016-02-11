@@ -25,17 +25,22 @@
 	    			// VARIABLES
 					$img = get_sub_field('product_preview_image');
 					$color = get_sub_field('product_preview_color');
+					$icon = get_sub_field('product_preview_icon');
 					$title = get_sub_field('product_preview_title');?>
 					
 					<!-- display a sub field value -->
-					<?php if ( !empty($img) ): ?>
+					<?php if ( !empty( $img ) ) : ?>
 						<img src="<?php echo $img['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
 					<?php endif; ?>
 					
-					<div class="productPreviewInfo">	
-						<?php echo $title; ?>
+					<div class="productPreviewInfo flex" style="background-color:<?php echo $color; ?>">
+						<?php if ( !empty( $icon ) ) : ?>
+							<img src="<?php echo $icon['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
+						<?php endif; ?>
+						<?php if ( !empty( $title) ) : ?>
+							<h3 class="productPreviewTitle"><?php echo $title; ?></h3>
+						<?php endif; ?>
 					</div> <!-- END OF PRODUCTPREVIEWINFO -->
-
 			<?php endwhile;
 
 			else :
