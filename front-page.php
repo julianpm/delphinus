@@ -30,11 +30,9 @@
 
 						<div class="product flex">
 							<!-- display a sub field value -->
-							<div class="productPreviewImage">
 								<?php if ( !empty( $img ) ) : ?>
 									<img src="<?php echo $img['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
 								<?php endif; ?>
-							</div> <!-- END OF PRODUCTPREVIEWIMAGE -->
 							
 							<div class="productPreviewInfo flex" style="background-color:<?php echo $color; ?>">
 								<?php if ( !empty( $icon ) ) : ?>
