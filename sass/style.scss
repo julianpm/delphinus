@@ -308,29 +308,26 @@ img {
 		padding-top:1.5%;
 	}
 
-	.clients{
-		padding:3.5% 0;
-	}
-
-	.clientsList{
-		justify-content:space-between;
-	}
-
 
 	// PRODUCT
 
+	.productPreview:nth-of-type(even){
+		flex-direction:row-reverse;
+	}
+
 	.productPreview{
-		img{
-			width: 67%;
-			height:100%;
-			padding-top:3%;
-		}
+		padding:3% 0;
+	}
+
+	.productPreviewImage{
+		width: 67%;
+		height: 100%;
+		padding-bottom:3%;
 	}
 
 	.productPreviewInfo{
-		margin-top:3%;
+		margin-bottom:3%;
 		width: 30%;
-		border:1px solid black;
 		flex-direction:column;
 		justify-content:center;
 		align-items:center;
@@ -345,6 +342,14 @@ img {
 		font-weight:normal;
 		letter-spacing:2px;
 		padding-top:15%;
+	}
+
+
+	// CLIENTS
+
+	.clientsList{
+		justify-content:space-between;
+		padding:3.5% 0;
 	}
 
 

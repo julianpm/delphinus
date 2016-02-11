@@ -12,52 +12,53 @@
 	    	<p class="splashBlurb"><?php the_field("splash_blurb"); ?></p>
 	    <?php endif; ?>
     </section> <!-- END OF SPLASH -->
-
+	
 	<section class="productPreview container flex">
-		<?php
+			<?php
 
-		// check if the repeater field has rows of data
-		if( have_rows('product_preview') ):
+			// check if the repeater field has rows of data
+			if( have_rows('product_preview') ):
 
-			// loop through the rows of data
-			while ( have_rows('product_preview') ) : the_row();
+				// loop through the rows of data
+				while ( have_rows('product_preview') ) : the_row();
 
-	    			// VARIABLES
-					$img = get_sub_field('product_preview_image');
-					$color = get_sub_field('product_preview_color');
-					$icon = get_sub_field('product_preview_icon');
-					$title = get_sub_field('product_preview_title');?>
-					
-					<!-- display a sub field value -->
-					<?php if ( !empty( $img ) ) : ?>
-						<img src="<?php echo $img['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
-					<?php endif; ?>
-					
-					<div class="productPreviewInfo flex" style="background-color:<?php echo $color; ?>">
-						<?php if ( !empty( $icon ) ) : ?>
-							<img src="<?php echo $icon['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
-						<?php endif; ?>
-						<?php if ( !empty( $title) ) : ?>
-							<h3 class="productPreviewTitle"><?php echo $title; ?></h3>
-						<?php endif; ?>
-					</div> <!-- END OF PRODUCTPREVIEWINFO -->
-			<?php endwhile;
+		    			// VARIABLES
+						$img = get_sub_field('product_preview_image');
+						$color = get_sub_field('product_preview_color');
+						$icon = get_sub_field('product_preview_icon');
+						$title = get_sub_field('product_preview_title');?>
+						
+						<!-- display a sub field value -->
+						<div class="productPreviewImage">
+							<?php if ( !empty( $img ) ) : ?>
+								<img src="<?php echo $img['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
+							<?php endif; ?>
+						</div> <!-- END OF PRODUCTPREVIEWIMAGE -->
+						
+						<div class="productPreviewInfo flex" style="background-color:<?php echo $color; ?>">
+							<?php if ( !empty( $icon ) ) : ?>
+								<img src="<?php echo $icon['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
+							<?php endif; ?>
+							<?php if ( !empty( $title) ) : ?>
+								<h3 class="productPreviewTitle"><?php echo $title; ?></h3>
+							<?php endif; ?>
+						</div> <!-- END OF PRODUCTPREVIEWINFO -->
+				<?php endwhile;
 
-			else :
+				else :
 
-		    // no rows found
+			    // no rows found
 
-			endif;
+				endif;
 
-			?>	
+				?>	
 	</section> <!-- END OF PRODUCTPREVIEW -->
 
-	<section class="clients container">
-    	<?php 
+    <?php 
 		$images = get_field('client_gallery');
 
 		if( $images ): ?>
-		    <ul class="clientsList flex">
+		    <ul class="clientsList container flex">
 		        <?php foreach( $images as $image ): ?>
 		            <li>
 		                <a href="<?php echo $image['url']; ?>">
@@ -67,9 +68,8 @@
 		            </li>
 		        <?php endforeach; ?>
 		    </ul> <!-- END OF CLIENTSLIST -->
-		<?php endif; ?>
-	</section> <!-- END OF CLIENTS -->
+	<?php endif; ?>
 
-  <?php endwhile; // end the loop?>
+  	<?php endwhile; // end the loop?>
 
 <?php get_footer(); ?>
