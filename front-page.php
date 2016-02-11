@@ -13,7 +13,7 @@
 	    <?php endif; ?>
     </section> <!-- END OF SPLASH -->
 	
-	<section class="productPreview container flex">
+	<section class="productPreview container">
 			<?php
 
 			// check if the repeater field has rows of data
@@ -27,22 +27,25 @@
 						$color = get_sub_field('product_preview_color');
 						$icon = get_sub_field('product_preview_icon');
 						$title = get_sub_field('product_preview_title');?>
+
+						<div class="product flex">
+							<!-- display a sub field value -->
+							<div class="productPreviewImage">
+								<?php if ( !empty( $img ) ) : ?>
+									<img src="<?php echo $img['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
+								<?php endif; ?>
+							</div> <!-- END OF PRODUCTPREVIEWIMAGE -->
+							
+							<div class="productPreviewInfo flex" style="background-color:<?php echo $color; ?>">
+								<?php if ( !empty( $icon ) ) : ?>
+									<img src="<?php echo $icon['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
+								<?php endif; ?>
+								<?php if ( !empty( $title) ) : ?>
+									<h3 class="productPreviewTitle"><?php echo $title; ?></h3>
+								<?php endif; ?>
+							</div> <!-- END OF PRODUCTPREVIEWINFO -->
+						</div><!-- .product -->
 						
-						<!-- display a sub field value -->
-						<div class="productPreviewImage">
-							<?php if ( !empty( $img ) ) : ?>
-								<img src="<?php echo $img['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
-							<?php endif; ?>
-						</div> <!-- END OF PRODUCTPREVIEWIMAGE -->
-						
-						<div class="productPreviewInfo flex" style="background-color:<?php echo $color; ?>">
-							<?php if ( !empty( $icon ) ) : ?>
-								<img src="<?php echo $icon['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
-							<?php endif; ?>
-							<?php if ( !empty( $title) ) : ?>
-								<h3 class="productPreviewTitle"><?php echo $title; ?></h3>
-							<?php endif; ?>
-						</div> <!-- END OF PRODUCTPREVIEWINFO -->
 				<?php endwhile;
 
 				else :
