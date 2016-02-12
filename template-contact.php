@@ -24,11 +24,9 @@ get_header();  ?>
 	<section class="mainContact container flex">
 		
 		<div class="address">
-		    <div class="streetAddress">
-		    	<?php if (get_field ("address") ) : ?>
-					<?php the_field("address"); ?>
-		    	<?php endif; ?>
-		    </div> <!-- END OF STREETADDRESS -->
+		    <?php if (get_field ("address") ) : ?>
+				<?php the_field("address"); ?>
+		   	<?php endif; ?>
 		    
 		    <div class="social contactSocial flex">
 				<?php if (get_field("social_facebook", "option") ) : ?>
@@ -58,7 +56,9 @@ get_header();  ?>
 			<?php if ( get_field( "greeting") ) : ?>
 				<h3><?php the_field("greeting"); ?></h3>
 			<?php endif; ?>
-			<?php the_content(); ?>
+			<?php if ( get_field( "mailchimp_code") ) : ?>
+				<?php the_field("mailchimp_code"); ?>
+			<?php endif; ?>
 		</div> <!-- END OF CONTACTUS -->
 
 	</section> <!-- END OF MAINCONTACT -->

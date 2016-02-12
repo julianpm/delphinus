@@ -91,7 +91,7 @@ img {
 
 	// COMBINED STYLES
 
-	.primaryNav, .secondaryNav, .templateTitle, .product, .mainContact, .promotionInner, .footerNavItems, .innerNewsletter, .social, .footerSocial{
+	.primaryNav, .secondaryNav, .templateTitle, .product, .mainContact, .formTopRow, .promotionInner, .footerNavItems, .innerNewsletter, .social, .footerSocial{
 		justify-content:space-between;
 	}
 
@@ -378,12 +378,10 @@ img {
 	// ADDRESS
 
 	.address{
-		width: 30%;
-		padding:5% 2%;
-	}
-
-	.streetAddress{
+		width: 31%;
+		padding:8% 2%;
 		color:$lightGrey;
+		letter-spacing:0.5px;
 		p:first-of-type{
 			padding-bottom:6%;
 		}
@@ -397,25 +395,55 @@ img {
 		margin-top:15%;
 	}
 
+	// FORM
+
 	.contactUs{
-		border:1px solid green;
 		width: 67%;
 		h3{
 			letter-spacing:3px;
 		}
 	}
 
-	// FORM
+	.contactUs input{
+		outline:none;
+		border:none;
+		border-bottom:1px solid $lightGrey;
+		margin-top:3%;
+		color:$lightGrey;
+	}
 
-	#mc_embed_signup{
-		.mc-field-group{
-			border:3px solid blue;
+	.contactUs input[type=submit]{
+		color:black;
+		text-transform:uppercase;
+		border:2px solid black;
+		background: none;
+		padding:12px 80px;
+		letter-spacing:1px;
+		transition:0.75s;
+		&:hover{
+			color:white;
+			background: black;
 		}
 	}
 
+	#mce-NAME, #mce-EMAIL, #mce-WEB, #mce-TITLE, #mce-REV{
+		width: 100%;
+	}
 
+	#mce-TITLE, #mce-REV{
+		margin-bottom:6%;
+	}
 
+	.validate{
+		color:$lightGrey;
+		letter-spacing:0.5px;
+	}
 
-
+	.formTopRow{
+		margin:8% 0 6% 0;
+		.mc-field-group{
+			width: 31.5%;
+		}
+	}
 
 
