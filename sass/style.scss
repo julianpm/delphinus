@@ -79,7 +79,6 @@ img {
 }
 
 .container {
-	border:1px solid blue;
 	max-width: 70%;
 	margin: 0 auto;
 }
@@ -226,6 +225,10 @@ img {
 		padding:2.5% 0;
 	}
 
+	.innerNewsletter{
+		align-items:center;
+	}
+
 	.social{
 		width: 20%;
 		align-items:center;
@@ -250,20 +253,20 @@ img {
 	}
 
 	.mc4wp-form-fields{
-		position:relative;
 		width: 100%;
 	}
 
 	.mc4wp-form-fields input[type=email]{
-		width: 100%;
-		@include fontSize(12);
+		width: 75%;
+		@include fontSize(16);
+		padding-left:1%;
 	}
 
 	.mc4wp-form-fields input[type=submit]{
-		position:absolute;
-		width: 35%;
-		top:0;
-		right:0;
+		color:$lightGrey;
+		width: 24%;
+		background: none;
+		border:1px solid $lightGrey;
 	}
 
 	.mainFooter, .elseFooter{
